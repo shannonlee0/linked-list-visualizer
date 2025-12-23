@@ -4,6 +4,8 @@ A full-stack educational tool that parses C++ code to visualize a singly-linked 
 
 This project contains a **custom-built Python interpreter** designed to simulate how a C-style compiler manages memory in real-time.
 
+![Project Demo](ezgif.com-video-to-gif-converter-8.gif)
+
 ### Key Technical Features
 * **Code Parsing & Tokenization:** Uses Regex-based pattern matching in Python to interpret C++ syntax, including `new Node()`, pointer reassignment, and `while` loops.
 * **Virtual Memory Management:** Tracks a simulated **Stack** (local variables) and **Heap** (dynamic memory addresses like `0x1`, `0x2`) to show exactly how memory is allocated.
