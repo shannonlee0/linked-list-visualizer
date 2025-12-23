@@ -32,7 +32,7 @@ As an instructor, I found that the most effective way to teach linked lists was 
 2. **Error-Prone:** A small mistake can lead to student confusion.
 3. **Static:** Students can't "rewind" a whiteboard drawing to see what happened three steps ago.
 
-I built this tool to automate the "whiteboard experience", giving students a dynamic representation of how C++ code manipulates memory.
+I built this tool to automate the whiteboard experience, giving students a dynamic representation of how C++ code manipulates memory.
 
 
 ---
@@ -60,7 +60,7 @@ cd linked-list-visualizer
 ```
 
 ### 2. Run the Backend (Flask)
-#### It is recommended to use a virtual environment
+It is recommended to use a virtual environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
