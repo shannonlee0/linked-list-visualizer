@@ -78,10 +78,8 @@ Open the provided local URL in your browser.
 
 ## Simulation Examples
 
-Try these scenarios to see the memory visualization in action:
-
 ### 1. Tracing Pointers by Reference (step-by-step solution to [CS106B Practice Problem #2](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1262/sections/section7/))
-Watch the **Stack** carefully to see when a new local pointer is created versus when the original pointer is modified.
+Watch carefully to see when a new local pointer is created versus when the original pointer is modified.
 
 <details>
 <summary>Click to see C++ Code</summary>
