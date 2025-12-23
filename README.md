@@ -7,7 +7,7 @@ A full-stack educational tool that parses C++ code to animate the relationship b
 ## The "Magic" Behind the Project
 Unlike standard visualizers that use simple "Add/Remove" buttons, this project contains a **custom-built Python interpreter** designed to simulate how a C-style compiler manages memory in real-time.
 
-### 🛠️ Key Technical Features
+### Key Technical Features
 * **Code Parsing & Tokenization:** Uses Regex-based pattern matching in Python to interpret C++ syntax, including `new Node()`, pointer reassignment, and `while` loops.
 * **Virtual Memory Management:** Tracks a simulated **Stack** (local variables) and **Heap** (dynamic memory addresses like `0x1`, `0x2`) to show exactly how memory is allocated.
 * **Step-Through Debugging:** Generates a "Trace Log" of the entire execution, allowing users to move **forward and backward** through their code's execution timeline.
@@ -45,5 +45,23 @@ The backend simulator currently supports:
 
 ### 1. Clone the Repo
 ```bash
-git clone [https://github.com/shannonlee0/linked-list-visualizer.git](https://github.com/shannonlee0/linked-list-visualizer.git)
+git clone https://github.com/shannonlee0/linked-list-visualizer.git
 cd linked-list-visualizer
+```
+
+### 2. Run the Backend (Flask)
+#### It is recommended to use a virtual environment
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install flask flask-cors
+python server.py
+```
+The server will start on http://localhost:5001
+
+### 3. Run the Frontend (React/Vite)
+```bash
+npm install
+npm run dev
+```
+Open the provided local URL in your browser.
