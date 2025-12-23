@@ -1,6 +1,6 @@
 # C++ Linked List Memory Visualizer
 
-A full-stack educational tool that parses C++ code to visualize a singly-linked list: illustrates pointer manipulation, list traversal, and memory leaks, and highlights the distinction between the **Stack** (pointers) and the **Heap** (nodes).
+A full-stack educational tool that parses C++ code to visualize a singly-linked list. Illustrates pointer manipulation, list traversal, and memory leaks. Additionally, highlights the distinction between the **Stack** (pointers) and the **Heap** (nodes).
 
 This project contains a **custom-built Python interpreter** designed to simulate how a C-style compiler manages memory in real-time.
 
@@ -26,7 +26,7 @@ This project contains a **custom-built Python interpreter** designed to simulate
 
 ---
 
-## The Inspiration
+## Motivation
 As an instructor, I found that the most effective way to teach linked lists was drawing them on a whiteboard. However, this process is:
 1. **Tedious:** Redrawing the entire list for every pointer change is slow and repetitive.
 2. **Error-Prone:** A small mistake can lead to student confusion.
@@ -80,8 +80,8 @@ Open the provided local URL in your browser.
 
 Try these scenarios to see the memory visualization in action:
 
-### 1. Tracing Pointers by Reference (step-by-step solution to [CS106B Practice Problem #2](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1262/sections/section7/)
-This script demonstrates how local copies of pointers behave differently than references. Watch the **Stack** carefully to see when a new local pointer is created versus when the original is modified.
+### 1. Tracing Pointers by Reference (step-by-step solution to [CS106B Practice Problem #2](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1262/sections/section7/))
+Watch the **Stack** carefully to see when a new local pointer is created versus when the original pointer is modified.
 
 <details>
 <summary>Click to see C++ Code</summary>
@@ -128,52 +128,27 @@ mystify(list);
 </details>
 
 ### 2. Deleting a Node
+See how a node can be deleted from the list.
 
 <details>
 <summary>Click to see C++ Code</summary>
   
 ```cpp
-void confuse(Node* list) {
-    list->data = 137;
-}
+Node* head = new Node(4);
+head->next = new Node(6);
+head->next->next = new Node(9);
+head->next->next->next = new Node(124);
 
-void befuddle(Node* list) {
-    list = new Node(0);
-    list->data = 42;
-    list->next = nullptr;
-}
+// want to delete THIRD node (hardcoded for pedagogical purposes)
 
-void confound(Node* list) {
-    list->next = new Node(0);
-    list->next->data = 2718;
-}
-
-void bamboozle(Node*& list) {
-    list->data = 42;
-}
-
-void mystify(Node*& list) {
-    list = new Node(0);
-    list->data = 161;
-    list->next = nullptr;
-}
-
-// MAIN
-// 1. Setup the list 1 -> 3 -> 5
-Node* list = new Node(1);
-list->next = new Node(3);
-list->next->next = new Node(5);
-
-// 2. Run the trace functions
-confuse(list);
-befuddle(list);
-confound(list);
-bamboozle(list);
-mystify(list);
+Node* before = head->next;
+Node* after = before->next->next;
+before->next = after;
 ```
 </details>
 
 ### 3. Traversing a Linked List
+See how to find some element of the list.
 
 <details>
 <summary>Click to see C++ Code</summary>
