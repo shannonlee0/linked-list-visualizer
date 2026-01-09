@@ -1,6 +1,6 @@
 # C++ Linked List Memory Visualizer
 
-A full-stack educational tool that parses C++ code to visualize a singly-linked list. Illustrates pointer manipulation, list traversal, and memory leaks. Additionally, highlights the distinction between the **Stack** (pointers) and the **Heap** (nodes).
+A full-stack educational tool that parses C++ code to visualize a singly-linked list. Illustrates pointer manipulation, list traversal, and memory leaks. Additionally, highlights the distinction between the stack and heap.
 
 This project contains a **custom-built Python interpreter** designed to simulate how a C-style compiler manages memory in real-time.
 
@@ -27,12 +27,12 @@ This project contains a **custom-built Python interpreter** designed to simulate
 ---
 
 ## Motivation
-As an instructor, I found that the most effective way to teach linked lists was drawing them on a whiteboard. However, this process is:
+As an instructor, I've found that the most effective way to teach linked lists was drawing them on a whiteboard. However, this process is:
 1. **Tedious:** Redrawing the entire list for every pointer change is slow and repetitive.
-2. **Error-Prone:** A small mistake can lead to student confusion.
-3. **Static:** Students can't "rewind" a whiteboard drawing to see what happened three steps ago.
+2. **Error-Prone:** A small mistake can lead to confusion.
+3. **Static:** Students can't "rewind" the drawing to see what happened three steps ago.
 
-I built this tool to automate the whiteboard experience, giving students a dynamic representation of how C++ code manipulates memory.
+I built this tool to automate this whiteboard experience and to give students a dynamic representation of how C++ code manipulates memory.
 
 
 ---
@@ -60,7 +60,7 @@ cd linked-list-visualizer
 ```
 
 ### 2. Run the Backend (Flask)
-It is recommended to use a virtual environment
+Recommended to use a virtual environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -79,7 +79,6 @@ Open the provided local URL in your browser.
 ## Simulation Examples
 
 ### 1. Tracing Pointers by Reference (step-by-step solution to [CS106B Practice Problem #2](https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1262/sections/section7/))
-Watch carefully to see when a new local pointer is created versus when the original pointer is modified.
 
 <details>
 <summary>Click to see C++ Code</summary>
